@@ -4,14 +4,14 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'package:flutter/material.dart';
 
-class Onboarding1 extends StatefulWidget {
-  const Onboarding1({super.key});
+class Onboarding extends StatefulWidget {
+  const Onboarding({super.key});
 
   @override
-  State<Onboarding1> createState() => _Onboarding1State();
+  State<Onboarding> createState() => _OnboardingState();
 }
 
-class _Onboarding1State extends State<Onboarding1> {
+class _OnboardingState extends State<Onboarding> {
   PageController _controller = PageController();
   @override
   Widget build(BuildContext context) {
@@ -21,16 +21,16 @@ class _Onboarding1State extends State<Onboarding1> {
           controller: _controller,
           children: <Widget>[
             OnBoardingScreen(
-              picture: "assets/Images/onboarding/firstimage.png",
-              title: "Empowering Artisans \nFarmers & Micro Bisuness",
+              picture: firstOnboardingImage,
+              title:firstOnboardingTitle,
             ),
             OnBoardingScreen(
-              picture: "assets/Images/onboarding/firstimage.png",
-              title: "Empowering Artisans \nFarmers & Micro Bisuness",
+              picture: secondOnboardingImage,
+              title: secondOnboardingTitle,
             ),
             OnBoardingScreen(
-              picture: "assets/Images/onboarding/firstimage.png",
-              title: "Empowering Artisans \nFarmers & Micro Bisuness",
+              picture: thirdOnboardingImage,
+              title: thirdOnboardingTitle,
             )
           ],
         ),

@@ -1,5 +1,4 @@
 import 'package:ecommerceapp/Screens/Onboarding/onboarding_1.dart';
-import 'package:ecommerceapp/Screens/Splash/splash.dart';
 import 'package:ecommerceapp/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
         useMaterial3: true,
       ),
-      home: const Onboarding1(),
+      home: const Onboarding(),
     );
   }
 }
