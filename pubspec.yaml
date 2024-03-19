@@ -30,12 +30,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  smooth_page_indicator: ^1.0.0
   flutter_native_splash: ^2.3.13
   
 flutter_native_splash:
     
   image: assets/Images/logo.png
   color: "#21CBAA"
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -69,7 +71,6 @@ flutter:
       - assets/Images/logo.png
       - assets/Images/onboarding/firstimage.png
   #   - images/a_dot_ham.jpeg
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
