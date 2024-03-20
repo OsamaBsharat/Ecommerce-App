@@ -19,6 +19,14 @@ final ButtonStyle buttonPrimaryStyle = ElevatedButton.styleFrom(
 );
 
 final ButtonStyle buttonSecondaryStyle = ElevatedButton.styleFrom(
-  backgroundColor:Colors.white,
-  foregroundColor:  primaryColor,
+  backgroundColor: Colors.white,
+  foregroundColor: primaryColor,
 );
+
+final Text greetingMessage = Text(
+  "Welcome To Sukar Store",
+  style:
+      TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+);
+
+

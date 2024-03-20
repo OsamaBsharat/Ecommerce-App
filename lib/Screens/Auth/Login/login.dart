@@ -1,6 +1,7 @@
 import 'package:ecommerceapp/Screens/Auth/Signup/signup.dart';
 import 'package:ecommerceapp/Screens/Auth/components/already_have_an_account_check.dart';
 import 'package:ecommerceapp/Screens/Auth/components/forget_password.dart';
+import 'package:ecommerceapp/Screens/Auth/components/login_signup_message.dart';
 import 'package:ecommerceapp/Screens/Auth/components/rounded_button.dart';
 import 'package:ecommerceapp/Screens/Auth/components/rounded_text_field.dart';
 import 'package:ecommerceapp/constants.dart';
@@ -30,20 +31,12 @@ class _LoginScreenState extends State<LoginScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text(
-            "Welcome To Sukar Store",
-            style: TextStyle(
-                fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
-          ),
+          greetingMessage,
           SizedBox(
             height: size.height * 0.1,
           ),
-          Text(
-            "Login to your account",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 16,
-            ),
+          LoginSignUpMessage(
+            loginflag: true,
           ),
           SizedBox(
             height: size.height * 0.05,
@@ -74,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ForgetPassword(
             press: () {},
           ),
-          SizedBox(height: size.height * 0.09),
+          SizedBox(height: size.height * 0.07),
           AlreadyHaveAnAccountCheck(
             login: true,
             press: () => {
