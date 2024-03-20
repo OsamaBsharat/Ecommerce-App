@@ -1,7 +1,9 @@
 import 'package:ecommerceapp/Screens/Login/components/already_have_an_account_check.dart';
+import 'package:ecommerceapp/Screens/Login/components/forget_password.dart';
 import 'package:ecommerceapp/Screens/Login/components/rounded_button.dart';
 import 'package:ecommerceapp/Screens/Login/components/rounded_text_field.dart';
 import 'package:ecommerceapp/constants.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -28,7 +30,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             ),
-            SizedBox(height: size.height*0.1,),
+            SizedBox(
+              height: size.height * 0.1,
+            ),
             Text(
               "Login to your account",
               style: TextStyle(
@@ -36,32 +40,36 @@ class _LoginScreenState extends State<LoginScreen> {
                 fontSize: 16,
               ),
             ),
-             SizedBox(height: size.height*0.05,),
+            SizedBox(
+              height: size.height * 0.05,
+            ),
             RoundedTextField(
               size: size,
               hintText: "Email/Mobile Number",
               isPassword: false,
             ),
-            SizedBox(height: size.height*0.02,),
+            SizedBox(
+              height: size.height * 0.02,
+            ),
             RoundedTextField(
               size: size,
               hintText: "Password",
               isPassword: true,
             ),
-            SizedBox(height: size.height*0.04,),
+            SizedBox(
+              height: size.height * 0.04,
+            ),
             RoundedButton(
               size: size,
               text: "Login",
             ),
-            SizedBox(height: size.height*0.02,),
-            Text(
-              "Forget your Password?",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-              ),
+            SizedBox(
+              height: size.height * 0.02,
             ),
-            SizedBox(height: size.height*0.09),
+            ForgetPassword(
+              press: () {},
+            ),
+            SizedBox(height: size.height * 0.09),
             AlreadyHaveAnAccountCheck(
               login: true,
               press: () => {},
