@@ -1,4 +1,5 @@
 import 'package:ecommerceapp/Screens/Onboarding/background.dart';
+import 'package:ecommerceapp/Screens/Onboarding/onboarding.dart';
 import 'package:ecommerceapp/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -7,9 +8,11 @@ class OnBoardingScreen extends StatelessWidget {
     super.key,
     required this.picture,
     required this.title,
+    required this.controller,
   });
   final String picture;
   final String title;
+  final PageController controller;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -44,17 +47,33 @@ class OnBoardingScreen extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            bottom: 50,
-            child: SizedBox(
-              width: size.width * 0.75,
-              child: ElevatedButton(
-                onPressed: () => {},
-                child: Text("Next"),
-                style: style,
-              ),
-            ),
-          ),
+          onLastPage
+              ? Positioned(
+                  bottom: 50,
+                  child: SizedBox(
+                    width: size.width * 0.75,
+                    child: ElevatedButton(
+                      onPressed: () => {},
+                      child: Text("Finish"),
+                      style: style,
+                    ),
+                  ),
+                )
+              : Positioned(
+                  bottom: 50,
+                  child: SizedBox(
+                    width: size.width * 0.75,
+                    child: ElevatedButton(
+                      onPressed: () => {
+                        controller.nextPage(
+                            duration: Duration(microseconds: 500),
+                            curve: Curves.easeIn),
+                      },
+                      child: Text("Next"),
+                      style: style,
+                    ),
+                  ),
+                )
         ],
       ),
     );

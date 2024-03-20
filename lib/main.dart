@@ -1,4 +1,4 @@
-import 'package:ecommerceapp/Screens/Onboarding/onboarding_1.dart';
+import 'package:ecommerceapp/Screens/Onboarding/onboarding.dart';
 import 'package:ecommerceapp/constants.dart';
 import 'package:flutter/material.dart';
 

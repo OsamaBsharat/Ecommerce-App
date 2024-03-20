@@ -4,40 +4,50 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'package:flutter/material.dart';
 
+bool onLastPage = false;
+
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
 
   @override
-  State<Onboarding> createState() => _OnboardingState();
+  State<Onboarding> createState() => OnboardingState();
 }
 
-class _OnboardingState extends State<Onboarding> {
-  PageController _controller = PageController();
+class OnboardingState extends State<Onboarding> {
+  PageController controller = PageController();
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
         PageView(
-          controller: _controller,
+          controller: controller,
+          onPageChanged: (index) => {
+            setState(() {
+              onLastPage = (index == 2);
+            }),
+          },
           children: <Widget>[
             OnBoardingScreen(
               picture: firstOnboardingImage,
-              title:firstOnboardingTitle,
+              title: firstOnboardingTitle,
+              controller: controller,
             ),
             OnBoardingScreen(
               picture: secondOnboardingImage,
               title: secondOnboardingTitle,
+              controller: controller,
             ),
             OnBoardingScreen(
               picture: thirdOnboardingImage,
               title: thirdOnboardingTitle,
+              controller: controller,
             )
           ],
         ),
         Container(
           alignment: Alignment(0, 0.7),
           child: SmoothPageIndicator(
-            controller: _controller,
+            controller: controller,
             count: 3,
             effect: SwapEffect(
               dotColor: Color.fromARGB(255, 147, 228, 197),
