@@ -1,4 +1,4 @@
-import 'package:ecommerceapp/Screens/Login/login.dart';
+import 'package:ecommerceapp/Screens/Auth/Login/login.dart';
 import 'package:ecommerceapp/Screens/Onboarding/background.dart';
 import 'package:ecommerceapp/Screens/Onboarding/onboarding.dart';
 import 'package:ecommerceapp/constants.dart';
