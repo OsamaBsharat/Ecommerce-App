@@ -1,3 +1,4 @@
+import 'package:ecommerceapp/Screens/Login/login.dart';
 import 'package:ecommerceapp/Screens/Onboarding/background.dart';
 import 'package:ecommerceapp/Screens/Onboarding/onboarding.dart';
 import 'package:ecommerceapp/constants.dart';
@@ -16,10 +17,7 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final ButtonStyle style = ElevatedButton.styleFrom(
-      backgroundColor: primaryColor,
-      foregroundColor: Colors.white,
-    );
+    
     return Scaffold(
       body: Stack(
         alignment: Alignment.center,
@@ -53,9 +51,16 @@ class OnBoardingScreen extends StatelessWidget {
                   child: SizedBox(
                     width: size.width * 0.75,
                     child: ElevatedButton(
-                      onPressed: () => {},
+                      onPressed: () => {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginScreen(),
+                          ),
+                        ),
+                      },
                       child: Text("Finish"),
-                      style: style,
+                      style: buttonPrimaryStyle,
                     ),
                   ),
                 )
@@ -70,7 +75,7 @@ class OnBoardingScreen extends StatelessWidget {
                             curve: Curves.easeIn),
                       },
                       child: Text("Next"),
-                      style: style,
+                      style: buttonPrimaryStyle,
                     ),
                   ),
                 )
