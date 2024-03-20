@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const primaryColor = Color(0xFF21CBAA);
+const primaryColor = Color(0xFF33907C);
 const logo = "assets/Images/logo.png";
 const String firstOnboardingImage = "assets/Images/onboarding/firstimage.png";
 const String secondOnboardingImage = "assets/Images/onboarding/secondimage.png";

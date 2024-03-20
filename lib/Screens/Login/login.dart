@@ -28,6 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             ),
+            SizedBox(height: size.height*0.1,),
             Text(
               "Login to your account",
               style: TextStyle(
@@ -35,20 +36,24 @@ class _LoginScreenState extends State<LoginScreen> {
                 fontSize: 16,
               ),
             ),
+             SizedBox(height: size.height*0.05,),
             RoundedTextField(
               size: size,
               hintText: "Email/Mobile Number",
               isPassword: false,
             ),
+            SizedBox(height: size.height*0.02,),
             RoundedTextField(
               size: size,
               hintText: "Password",
               isPassword: true,
             ),
+            SizedBox(height: size.height*0.04,),
             RoundedButton(
               size: size,
               text: "Login",
             ),
+            SizedBox(height: size.height*0.02,),
             Text(
               "Forget your Password?",
               style: TextStyle(
@@ -56,6 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 fontSize: 18,
               ),
             ),
+            SizedBox(height: size.height*0.09),
             AlreadyHaveAnAccountCheck(
               login: true,
               press: () => {},
@@ -67,4 +73,3 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-
