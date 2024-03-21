@@ -5,6 +5,7 @@ const logo = "assets/Images/logo.png";
 const String firstOnboardingImage = "assets/Images/onboarding/firstimage.png";
 const String secondOnboardingImage = "assets/Images/onboarding/secondimage.png";
 const String thirdOnboardingImage = "assets/Images/onboarding/thirdimage.png";
+const String forgetPasswordImage ="assets/Images/forget_password/forgetpassword.png";
 
 const String firstOnboardingTitle =
     "Sukar Store can help you\nTo find the beutiful gifts";
