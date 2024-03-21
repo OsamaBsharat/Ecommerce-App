@@ -4,6 +4,7 @@ import 'package:ecommerceapp/Screens/Auth/components/forget_password.dart';
 import 'package:ecommerceapp/Screens/Auth/components/login_signup_message.dart';
 import 'package:ecommerceapp/Screens/Auth/components/rounded_button.dart';
 import 'package:ecommerceapp/Screens/Auth/components/rounded_text_field.dart';
+import 'package:ecommerceapp/Screens/Auth/fotget_password.dart/forget_password_screen.dart';
 import 'package:ecommerceapp/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -65,7 +66,14 @@ class _LoginScreenState extends State<LoginScreen> {
             height: size.height * 0.02,
           ),
           ForgetPassword(
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ForgetPasswordScreen(),
+                ),
+              );
+            },
           ),
           SizedBox(height: size.height * 0.07),
           AlreadyHaveAnAccountCheck(

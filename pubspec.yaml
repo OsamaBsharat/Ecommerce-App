@@ -72,6 +72,7 @@ flutter:
       - assets/Images/onboarding/firstimage.png
       - assets/Images/onboarding/secondimage.png
       - assets/Images/onboarding/thirdimage.png
+      - assets/Images/forget_password/forgetpassword.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

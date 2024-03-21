@@ -1,4 +1,4 @@
-import 'package:ecommerceapp/Screens/Onboarding/onboarding_screen.dart';
+import 'package:ecommerceapp/Screens/Onboarding/onboarding_screen_structure.dart';
 import 'package:ecommerceapp/constants.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

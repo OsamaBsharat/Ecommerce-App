@@ -8,7 +8,7 @@ class ForgetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => {},
+      onTap: press,
       child: Text(
         "Forget your Password?",
         style: TextStyle(

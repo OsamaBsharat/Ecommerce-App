@@ -9,7 +9,7 @@ class LoginSignUpMessage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      loginflag ? "Login to your account" : "Signup to your account",
+      loginflag ? "Login to your account" : "Create your account now !",
       style: TextStyle(
         color: Colors.white,
         fontSize: 16,
