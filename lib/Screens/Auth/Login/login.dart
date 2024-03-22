@@ -61,6 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
           RoundedButton(
             size: size,
             text: "Login",
+            press: (){},
           ),
           SizedBox(
             height: size.height * 0.02,

@@ -1,18 +1,18 @@
 import 'package:ecommerceapp/Screens/Auth/Login/login.dart';
 import 'package:ecommerceapp/Screens/Auth/components/rounded_button.dart';
 import 'package:ecommerceapp/Screens/Auth/components/rounded_text_field.dart';
-import 'package:ecommerceapp/Screens/Auth/fotget_password.dart/rest_password_screen.dart';
+import 'package:ecommerceapp/Screens/Auth/fotget_password.dart/forget_password_screen.dart';
 import 'package:ecommerceapp/constants.dart';
 import 'package:flutter/material.dart';
 
-class ForgetPasswordScreen extends StatefulWidget {
-  const ForgetPasswordScreen({super.key});
+class RestPasswordScreen extends StatefulWidget {
+  const RestPasswordScreen({super.key});
 
   @override
-  State<ForgetPasswordScreen> createState() => _ForgetPasswordScreenState();
+  State<RestPasswordScreen> createState() => _RestPasswordScreen();
 }
 
-class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
+class _RestPasswordScreen extends State<RestPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -32,7 +32,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const LoginScreen(),
+                    builder: (context) => const ForgetPasswordScreen(),
                   ),
                 );
               },
@@ -55,12 +55,15 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               height: 30,
             ),
             Image.asset(
-              forgetPasswordImage,
-              width: 200,
-              height: 200,
+              restPasswordImage,
+              width: 150,
+              height: 150,
+            ),
+            const SizedBox(
+              height: 15,
             ),
             const Text(
-              "Mail address Here",
+              "Enter New Password",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 24,
@@ -69,7 +72,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
             ),
             const Text(
               textAlign: TextAlign.center,
-              "Enter the email address associated\nwith your account.",
+              "Your new password must be different\nfrom previously used password.",
               style: TextStyle(
                 color: Colors.white60,
               ),
@@ -78,18 +81,20 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               height: 30,
             ),
             RoundedTextField(
-                size: size, hintText: "Enter your E-mail", isPassword: false),
+                size: size, hintText: "Password", isPassword: true),
+            SizedBox(
+              height: size.height * 0.02,
+            ),
+            RoundedTextField(
+                size: size, hintText: "Confirm Password", isPassword: true),
             const SizedBox(
               height: 25,
             ),
-            RoundedButton(size: size, text: "Recover Password",press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const RestPasswordScreen(),
-                  ),
-                );
-              },),
+            RoundedButton(
+              size: size,
+              text: "Continue",
+              press: () {},
+            ),
             const SizedBox(
               height: 150,
             ),

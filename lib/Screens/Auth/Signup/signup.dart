@@ -58,7 +58,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             SizedBox(
               height: size.height * 0.02,
             ),
-            RoundedButton(size: size, text: "Create"),
+            RoundedButton(size: size, text: "Create",press: (){},),
             SizedBox(
               height: size.height * 0.04,
             ),
