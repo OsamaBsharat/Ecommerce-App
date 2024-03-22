@@ -41,11 +41,11 @@ class _RestPasswordScreen extends State<RestPasswordScreen> {
         ),
       ),
       backgroundColor: primaryColor,
-      body: forgetPasswordBody(size),
+      body: restPasswordBody(size),
     );
   }
 
-  Center forgetPasswordBody(Size size) {
+  Center restPasswordBody(Size size) {
     return Center(
       child: SingleChildScrollView(
         child: Column(
