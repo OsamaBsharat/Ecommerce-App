@@ -1,23 +1,21 @@
-import 'package:ecommerceapp/Screens/Auth/OTP/OTP_verification_screen.dart';
+import 'package:ecommerceapp/Screens/Auth/OTP/send_otp.dart';
 import 'package:ecommerceapp/Screens/Auth/components/rounded_button.dart';
 import 'package:ecommerceapp/Screens/Auth/components/rounded_text_field.dart';
-import 'package:ecommerceapp/Screens/Auth/fotget_password.dart/forget_password_screen.dart';
-import 'package:ecommerceapp/Screens/Auth/fotget_password.dart/rest_password_screen.dart';
 import 'package:ecommerceapp/constants.dart';
 import 'package:flutter/material.dart';
 
-class SendOTPScreen extends StatefulWidget {
-  const SendOTPScreen({super.key});
+class OTPVerificationScreen extends StatefulWidget {
+  const OTPVerificationScreen({super.key});
 
   @override
-  State<SendOTPScreen> createState() => _SendOTPScreenState();
+  State<OTPVerificationScreen> createState() => _OTPVerificationScreenState();
 }
 
-class _SendOTPScreenState extends State<SendOTPScreen> {
+class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    return Scaffold(
+        final size = MediaQuery.of(context).size;
+   return Scaffold(
       backgroundColor: primaryColor,
       appBar: AppBar(
         backgroundColor: primaryColor,
@@ -34,7 +32,7 @@ class _SendOTPScreenState extends State<SendOTPScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const RestPasswordScreen(),
+                    builder: (context) => const SendOTPScreen(),
                   ),
                 );
               },
@@ -52,18 +50,18 @@ class _SendOTPScreenState extends State<SendOTPScreen> {
               height: 200,
             ),
             Text(
-              "Verify your phone number",
+              "Phone Verification",
               style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             ),
             SizedBox(
-              height: size.height * 0.02,
+              height: size.height * 0.01,
             ),
             Text(
               textAlign: TextAlign.center,
-              "We have sent you an SMS with a code to\nenter number",
+              "Enter your OTP code here ",
               style: TextStyle(
                 color: Colors.white60,
               ),

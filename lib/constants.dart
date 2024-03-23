@@ -7,7 +7,7 @@ const String secondOnboardingImage = "assets/Images/onboarding/secondimage.png";
 const String thirdOnboardingImage = "assets/Images/onboarding/thirdimage.png";
 const String forgetPasswordImage ="assets/Images/forget_password/forgetpassword.png";
 const String restPasswordImage ="assets/Images/forget_password/restpassword.png";
-
+const String sendOTPimage =  "assets/Images/forget_password/sendOTPimage.png";
 const String firstOnboardingTitle =
     "Sukar Store can help you\nTo find the beutiful gifts";
 const String secondOnboardingTitle =
