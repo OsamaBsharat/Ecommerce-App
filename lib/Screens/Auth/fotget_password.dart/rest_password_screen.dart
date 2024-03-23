@@ -1,4 +1,5 @@
 import 'package:ecommerceapp/Screens/Auth/Login/login.dart';
+import 'package:ecommerceapp/Screens/Auth/OTP/send_otp.dart';
 import 'package:ecommerceapp/Screens/Auth/components/rounded_button.dart';
 import 'package:ecommerceapp/Screens/Auth/components/rounded_text_field.dart';
 import 'package:ecommerceapp/Screens/Auth/fotget_password.dart/forget_password_screen.dart';
@@ -93,7 +94,14 @@ class _RestPasswordScreen extends State<RestPasswordScreen> {
             RoundedButton(
               size: size,
               text: "Continue",
-              press: () {},
+              press: () {
+                 Navigator.push(
+                   context,
+                  MaterialPageRoute(
+                    builder: (context) => const SendOTPScreen(),
+                  ),
+                );
+              },
             ),
             const SizedBox(
               height: 150,
