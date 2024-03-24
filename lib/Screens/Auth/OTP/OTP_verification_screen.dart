@@ -3,6 +3,7 @@ import 'package:ecommerceapp/Screens/Auth/components/rounded_button.dart';
 import 'package:ecommerceapp/Screens/Auth/components/rounded_text_field.dart';
 import 'package:ecommerceapp/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class OTPVerificationScreen extends StatefulWidget {
   const OTPVerificationScreen({super.key});
@@ -14,8 +15,8 @@ class OTPVerificationScreen extends StatefulWidget {
 class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
   @override
   Widget build(BuildContext context) {
-        final size = MediaQuery.of(context).size;
-   return Scaffold(
+    final size = MediaQuery.of(context).size;
+    return Scaffold(
       backgroundColor: primaryColor,
       appBar: AppBar(
         backgroundColor: primaryColor,
@@ -66,22 +67,134 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                 color: Colors.white60,
               ),
             ),
-            SizedBox(
-              height: size.height * 0.02,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  SizedBox(
+                    height: 68,
+                    width: 64,
+                    child: TextField(
+                      onChanged: ((value) {
+                        if (value.length == 1)
+                          FocusScope.of(context).nextFocus();
+                      }),
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.headlineLarge,
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [
+                        LengthLimitingTextInputFormatter(1),
+                        FilteringTextInputFormatter.digitsOnly,
+                      ],
+                      decoration: InputDecoration(
+                        hintStyle: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 68,
+                    width: 64,
+                    child: TextField(
+                      onChanged: ((value) {
+                        if (value.length == 1)
+                          FocusScope.of(context).nextFocus();
+                      }),
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.headlineLarge,
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [
+                        LengthLimitingTextInputFormatter(1),
+                        FilteringTextInputFormatter.digitsOnly,
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 68,
+                    width: 64,
+                    child: TextField(
+                      onChanged: ((value) {
+                        if (value.length == 1)
+                          FocusScope.of(context).nextFocus();
+                      }),
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.headlineLarge,
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [
+                        LengthLimitingTextInputFormatter(1),
+                        FilteringTextInputFormatter.digitsOnly,
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 68,
+                    width: 64,
+                    child: TextField(
+                      onChanged: ((value) {
+                        if (value.length == 1)
+                          FocusScope.of(context).nextFocus();
+                      }),
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.headlineLarge,
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [
+                        LengthLimitingTextInputFormatter(1),
+                        FilteringTextInputFormatter.digitsOnly,
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 68,
+                    width: 64,
+                    child: TextField(
+                      onChanged: ((value) {
+                        if (value.length == 1)
+                          FocusScope.of(context).nextFocus();
+                      }),
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.headlineLarge,
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [
+                        LengthLimitingTextInputFormatter(1),
+                        FilteringTextInputFormatter.digitsOnly,
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 68,
+                    width: 64,
+                    child: TextField(
+                      onChanged: ((value) {
+                        if (value.length == 1)
+                          FocusScope.of(context).nextFocus();
+                      }),
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.headlineLarge,
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [
+                        LengthLimitingTextInputFormatter(1),
+                        FilteringTextInputFormatter.digitsOnly,
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
-            RoundedTextField(
-                size: size, hintText: "594-140-599", isPassword: false),
             SizedBox(
               height: size.height * 0.05,
             ),
-            RoundedButton(size: size, text: "Next", press: () {
+            RoundedButton(
+              size: size,
+              text: "Next",
+              press: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const OTPVerificationScreen(),
                   ),
                 );
-              },),
+              },
+            ),
           ],
         ),
       ),
