@@ -4,6 +4,7 @@ import 'package:ecommerceapp/Screens/Auth/components/rounded_text_field.dart';
 import 'package:ecommerceapp/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 
 class OTPVerificationScreen extends StatefulWidget {
   const OTPVerificationScreen({super.key});
@@ -64,7 +65,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
               textAlign: TextAlign.center,
               "Enter your OTP code here ",
               style: TextStyle(
-                color: Colors.white60,
+                color: Colors.white,
               ),
             ),
             Padding(
@@ -72,113 +73,25 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  SizedBox(
-                    height: 68,
-                    width: 64,
-                    child: TextField(
-                      onChanged: ((value) {
-                        if (value.length == 1)
-                          FocusScope.of(context).nextFocus();
-                      }),
-                      textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineLarge,
-                      keyboardType: TextInputType.number,
-                      inputFormatters: [
-                        LengthLimitingTextInputFormatter(1),
-                        FilteringTextInputFormatter.digitsOnly,
-                      ],
-                      decoration: InputDecoration(
-                        hintStyle: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 68,
-                    width: 64,
-                    child: TextField(
-                      onChanged: ((value) {
-                        if (value.length == 1)
-                          FocusScope.of(context).nextFocus();
-                      }),
-                      textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineLarge,
-                      keyboardType: TextInputType.number,
-                      inputFormatters: [
-                        LengthLimitingTextInputFormatter(1),
-                        FilteringTextInputFormatter.digitsOnly,
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 68,
-                    width: 64,
-                    child: TextField(
-                      onChanged: ((value) {
-                        if (value.length == 1)
-                          FocusScope.of(context).nextFocus();
-                      }),
-                      textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineLarge,
-                      keyboardType: TextInputType.number,
-                      inputFormatters: [
-                        LengthLimitingTextInputFormatter(1),
-                        FilteringTextInputFormatter.digitsOnly,
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 68,
-                    width: 64,
-                    child: TextField(
-                      onChanged: ((value) {
-                        if (value.length == 1)
-                          FocusScope.of(context).nextFocus();
-                      }),
-                      textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineLarge,
-                      keyboardType: TextInputType.number,
-                      inputFormatters: [
-                        LengthLimitingTextInputFormatter(1),
-                        FilteringTextInputFormatter.digitsOnly,
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 68,
-                    width: 64,
-                    child: TextField(
-                      onChanged: ((value) {
-                        if (value.length == 1)
-                          FocusScope.of(context).nextFocus();
-                      }),
-                      textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineLarge,
-                      keyboardType: TextInputType.number,
-                      inputFormatters: [
-                        LengthLimitingTextInputFormatter(1),
-                        FilteringTextInputFormatter.digitsOnly,
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 68,
-                    width: 64,
-                    child: TextField(
-                      onChanged: ((value) {
-                        if (value.length == 1)
-                          FocusScope.of(context).nextFocus();
-                      }),
-                      textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineLarge,
-                      keyboardType: TextInputType.number,
-                      inputFormatters: [
-                        LengthLimitingTextInputFormatter(1),
-                        FilteringTextInputFormatter.digitsOnly,
-                      ],
-                    ),
-                  ),
+                  InputForOTPDigit(),
+                  InputForOTPDigit(),
+                  InputForOTPDigit(),
+                  InputForOTPDigit(),
+                  InputForOTPDigit(),
                 ],
               ),
+            ),
+            SizedBox(
+              height: size.height * 0.05,
+            ),
+            Text(
+              "Didn't you recived Any Code ?",
+              style: TextStyle(color: Colors.white),
+            ),
+            GestureDetector(
+              child:
+                  Text("Resent new ode", style: TextStyle(color: Colors.white)),
+              onTap: () {},
             ),
             SizedBox(
               height: size.height * 0.05,
@@ -196,6 +109,51 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
               },
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class InputForOTPDigit extends StatelessWidget {
+  const InputForOTPDigit({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 68,
+      width: 64,
+      child: TextField(
+        onChanged: ((value) {
+          if (value.length == 1) FocusScope.of(context).nextFocus();
+        }),
+        textAlign: TextAlign.center,
+        style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold // Set text color to white
+            ),
+        cursorColor: Colors.white, // Set cursor color to white
+        keyboardType: TextInputType.number,
+        inputFormatters: [
+          LengthLimitingTextInputFormatter(1),
+          FilteringTextInputFormatter.digitsOnly,
+        ],
+        decoration: InputDecoration(
+          border: UnderlineInputBorder(
+            borderSide: BorderSide(
+                color: Colors.white), // Set bottom border color to white
+          ),
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(
+                color: Colors
+                    .white), // Set bottom border color to white when focused
+          ),
+          enabledBorder: UnderlineInputBorder(
+            borderSide:
+                BorderSide(color: Colors.white), // Hide the other borders
+          ),
         ),
       ),
     );
