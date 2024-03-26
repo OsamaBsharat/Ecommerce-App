@@ -90,7 +90,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
             ),
             GestureDetector(
               child:
-                  Text("Resent new ode", style: TextStyle(color: Colors.white)),
+                  Text("Resent new Code", style: TextStyle(color: Colors.white)),
               onTap: () {},
             ),
             SizedBox(
