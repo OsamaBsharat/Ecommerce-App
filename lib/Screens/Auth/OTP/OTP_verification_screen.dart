@@ -98,7 +98,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
             ),
             RoundedButton(
               size: size,
-              text: "Next",
+              text: "Verfiy",
               press: () {
                 Navigator.push(
                   context,
