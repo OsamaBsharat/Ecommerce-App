@@ -1,11 +1,8 @@
 import 'package:ecommerceapp/Screens/Onboarding/onboarding.dart';
 import 'package:ecommerceapp/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+void main() {
   runApp(const MyApp());
 }
 

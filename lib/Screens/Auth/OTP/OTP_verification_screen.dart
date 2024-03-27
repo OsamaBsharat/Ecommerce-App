@@ -90,7 +90,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
             ),
             GestureDetector(
               child:
-                  Text("Resent new code", style: TextStyle(color: Colors.white)),
+                  Text("Resent new Code", style: TextStyle(color: Colors.white)),
               onTap: () {},
             ),
             SizedBox(
@@ -98,7 +98,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
             ),
             RoundedButton(
               size: size,
-              text: "Verify",
+              text: "Verfiy",
               press: () {
                 Navigator.push(
                   context,
