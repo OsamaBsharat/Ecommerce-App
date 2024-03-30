@@ -5,6 +5,7 @@ import 'package:ecommerceapp/Screens/Auth/components/login_signup_message.dart';
 import 'package:ecommerceapp/Screens/Auth/components/rounded_button.dart';
 import 'package:ecommerceapp/Screens/Auth/components/rounded_text_field.dart';
 import 'package:ecommerceapp/Screens/Auth/fotget_password.dart/forget_password_screen.dart';
+import 'package:ecommerceapp/Screens/HomeDashboard/home_dashboard.dart';
 import 'package:ecommerceapp/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -61,7 +62,14 @@ class _LoginScreenState extends State<LoginScreen> {
           RoundedButton(
             size: size,
             text: "Login",
-            press: (){},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const HomeDashboardScreen(),
+                ),
+              );
+            },
           ),
           SizedBox(
             height: size.height * 0.02,
