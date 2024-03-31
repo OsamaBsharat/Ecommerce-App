@@ -1,6 +1,7 @@
 import 'package:ecommerceapp/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class HomeDashboardScreen extends StatefulWidget {
   const HomeDashboardScreen({super.key});
@@ -14,6 +15,29 @@ class _HomeDashboardScreenState extends State<HomeDashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        
+        backgroundColor: primaryColor,
+        title: Text(
+          "Dashboard",
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.favorite),
+            color: Colors.white,
+            iconSize: 35,
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.shopping_cart),
+            color: Colors.white,
+            iconSize: 35,
+          )
+        ],
+       
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         type: BottomNavigationBarType.fixed,
